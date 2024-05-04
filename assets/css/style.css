@@ -1,0 +1,67 @@
+/* 
+
+    Primary Color: Apply to the main background of the website, including the header, footer, and large sections of content.
+    Accent Color: Use for buttons, links, call-to-action elements, and any other interactive components that require user attention.
+    Secondary Color: Apply to borders, dividers, icons, and other decorative elements to add visual interest and hierarchy to the design.
+    Text Color: Ensure readability by using a text color that contrasts well with the background. Apply this color to all text content, including headings, paragraphs, and navigation menus.
+
+*/
+
+/* Define CSS Variables */
+:root {
+    /* Ocean Blues and Sandy Tans */
+    --primary-color: #0077be;
+    --accent-color: #3498db;
+    --secondary-color: #d2b48c;
+    
+    /* Adventure Greens and Mountain Browns */
+    /* --primary-color: #228b22;
+    --accent-color: #8b4513;
+    --secondary-color: #90ee90; */
+    
+    /* Sunset Palette */
+    /*--primary-color: #ff7f50;*/
+    /*--accent-color: #ffd700;*/
+    /*--secondary-color: #ff69b4;*/
+    
+    /* Modern Neutrals */
+    /*--primary-color: #f5f5f5;*/
+    /*--accent-color: #333333;*/
+    /*--secondary-color: #555555;*/
+    
+    /* Global Vibrancy */
+    /*--primary-color: #a72525;*/
+    /*--accent-color: #006400;*/
+    /*--secondary-color: #00bfff;*/
+    
+    /* Text Color */
+    --text-color: #fff;
+  }
+
+  *{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+  
+  /* Apply CSS Variables */
+  nav,footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  /* Example usage of variables */
+  .button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+  i.bi{
+    color:var(--secondary-color)
+  }
+  
+  a, .nav-item>a.nav-link {
+    color: var(--text-color);
+  }
+  
+  /* Additional elements can use secondary color */
+  hr {
+    border-color: var(--secondary-color);
+  }
