@@ -1,71 +1,86 @@
-/* 
-
-    Primary Color: Apply to the main background of the website, including the header, footer, and large sections of content.
-    Accent Color: Use for buttons, links, call-to-action elements, and any other interactive components that require user attention.
-    Secondary Color: Apply to borders, dividers, icons, and other decorative elements to add visual interest and hierarchy to the design.
-    Text Color: Ensure readability by using a text color that contrasts well with the background. Apply this color to all text content, including headings, paragraphs, and navigation menus.
-
-*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Define CSS Variables */
 :root {
-    /* Ocean Blues and Sandy Tans */
-    --primary-color: #0077be;
-    --accent-color: #3498db;
-    --secondary-color: #d2b48c;
-    
-    /* Adventure Greens and Mountain Browns */
-    /* --primary-color: #228b22;
-    --accent-color: #8b4513;
-    --secondary-color: #90ee90; */
-    
-    /* Sunset Palette */
-    /*--primary-color: #ff7f50;*/
-    /*--accent-color: #ffd700;*/
-    /*--secondary-color: #ff69b4;*/
-    
-    /* Modern Neutrals */
-    /*--primary-color: #f5f5f5;*/
-    /*--accent-color: #333333;*/
-    /*--secondary-color: #555555;*/
-    
-    /* Global Vibrancy */
-    /*--primary-color: #a72525;*/
-    /*--accent-color: #006400;*/
-    /*--secondary-color: #00bfff;*/
-    
-    /* Text Color */
-    --text-color: #fff;
-  }
-
-  *{
-    margin: 0; padding: 0; box-sizing: border-box;
+  /* Ocean Blues and Sandy Tans */
+  --primary-color: #0077be;
+  --accent-color: #3498db;
+  --secondary-color: #d2b48c;
+  /* Text Color */
+  --text-color: #fff;
 }
-  
-  /* Apply CSS Variables */
-  nav,footer {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-  }
-  
-  /* Example usage of variables */
-  .button {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-  }
-  i.bi{
-    color:#fff; 
-  }
-    
-  i.bi-list{
-    font-size: 2rem;
-  }
-  
-  a, .nav-item>a.nav-link, a.nav-link {
-    color: var(--text-color);
-  }
-  
-  /* Additional elements can use secondary color */
-  hr {
-    border-color: var(--secondary-color);
-  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: 'Roboto', sans-serif;
+}
+
+textarea{
+  resize: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Apply CSS Variables */
+nav,
+footer {
+  background-color: var(--primary-color);
+}
+
+/* Example usage of variables */
+.button {
+  background-color: var(--accent-color);
+}
+
+i.bi,
+.button,
+.button:hover,
+a,
+.nav-item>a.nav-link,
+a.nav-link,
+a.nav-link:hover,
+a.navbar-brand:hover,
+nav,
+main,
+footer,
+.list-unstyled>li a:hover {
+  color: var(--text-color);
+}
+
+.list-unstyled>li{
+  margin: 1rem 0;
+}
+.list-unstyled>li a{
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.list-inline>li{
+  display: inline;
+  margin: 0 .5rem;
+}
+
+i.bi-list {
+  font-size: 2rem;
+}
+
+
+/* Additional elements can use secondary color */
+hr {
+  border-color: var(--secondary-color);
+}
