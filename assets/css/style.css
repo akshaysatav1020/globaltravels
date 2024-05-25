@@ -84,3 +84,99 @@ i.bi-list {
 hr {
   border-color: var(--secondary-color);
 }
+
+/* Sub-page banner */
+.pg-title{
+  color: #fff; z-index: 2;
+  align-content:center; text-align: center;
+}
+.pg-banner {
+  background-image: url('../images/banner1.jpeg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 3/1;
+}
+
+.faq{
+  background-image: url('../images/faqs.jpeg');
+}
+
+.pg-banner::before {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 3/1;
+  background-color: #0000002e;
+  content: '';
+}
+.accordion-body{
+  color: #212529;
+}
+
+/* Home page */
+.feat-sect{
+  padding: 1.5rem !important; color: #fff;
+  aspect-ratio: 4/1;
+}
+@keyframes zoom {
+  from {scale:100%;}
+  to {scale: 105%;}
+}
+
+.feat-sect:hover{
+  animation: zoom .3s .2s 1 linear forwards;
+}
+
+.feat-sect-1{background-color: #FFD700;}
+.feat-sect-2{background-color: #00BFFF;}
+.feat-sect-3{background-color: #FF4500;}
+.feat-sect-4{background-color: #32CD32;}
+.feat-sect-5{background-color: #FF6347;}
+.feat-sect-6{background-color: #4682B4;}
+
+
+/* Airline page */
+
+.airline-box h5{
+  text-align: center; margin:4rem 0;
+}
+.airline-box {
+  background-image: url('../images/banner1.jpeg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 3/1;
+  filter: blur(3px);
+  
+}
+
+@keyframes a {
+  from {filter: blur(3px);}
+  to {filter: blur(0px);}
+}
+
+.airline-box:hover {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 3/1;
+  animation: a .3s linear .1s 1 forwards;
+}
+.airline-box-1{background-image: url('../images/delta-air.jpg');}
+.airline-box-2{background-image: url('../images/united-air.jpg');}
+.airline-box-3{background-image: url('../images/american-air.jpg');}
+.airline-box-4{background-image: url('../images/sw-air.jpg');}
+.airline-box-5{background-image: url('../images/british-air.jpg');}
+.airline-box-6{background-image: url('../images/qatar-air.jpg');}
+.airline-box-7{background-image: url('../images/jet-blue-air.jpg');}
+.airline-box-8{background-image: url('../images/turkish-air.jpg');}
+
+.airline-box-1:hover{background-image: url('../images/delta-air.jpg');}
+.airline-box-2:hover{background-image: url('../images/united-air.jpg');}
+.airline-box-3:hover{background-image: url('../images/american-air.jpg');}
+.airline-box-4:hover{background-image: url('../images/sw-air.jpg');}
+.airline-box-5:hover{background-image: url('../images/british-air.jpg');}
+.airline-box-6:hover{background-image: url('../images/qatar-air.jpg');}
+.airline-box-7:hover{background-image: url('../images/jet-blue-air.jpg');}
+.airline-box-8:hover{background-image: url('../images/turkish-air.jpg');}
+

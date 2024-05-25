@@ -34,61 +34,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-  <style>
-    .pg-banner {
-      background-image: url('assets/images/banner1.jpeg');
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-size: cover;
-      aspect-ratio: 3/1;
-    }
-
-    .pg-banner::before {
-      position: absolute;
-      width: 100%;
-      aspect-ratio: 3/1;
-      background-color: #0000002e;
-      content: '';
-    }
-
-    .airline-box {
-      background-image: url('assets/images/banner1.jpeg');
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-size: cover;
-      aspect-ratio: 3/1;
-      filter: blur(3px);
-    }
-
-    .airline-box-1{background-image: url('assets/images/delta-air.jpg');}
-    .airline-box-2{background-image: url('assets/images/united-air.jpg');}
-    .airline-box-3{background-image: url('assets/images/american-air.jpg');}
-    .airline-box-4{background-image: url('assets/images/sw-air.jpg');}
-    .airline-box-5{background-image: url('assets/images/british-air.jpg');}
-    .airline-box-6{background-image: url('assets/images/qatar-air.jpg');}
-    .airline-box-7{background-image: url('assets/images/jet-blue-air.jpg');}
-    .airline-box-8{background-image: url('assets/images/turkish-air.jpg');}
-    .airline-box-9{background-image: url('assets/images/ethopian-air.jpeg');}
-
-    .airline-box-1:hover{background-image: url('assets/images/delta-air.jpg');}
-    .airline-box-2:hover{background-image: url('assets/images/united-air.jpg');}
-    .airline-box-3:hover{background-image: url('assets/images/american-air.jpg');}
-    .airline-box-4:hover{background-image: url('assets/images/sw-air.jpg');}
-    .airline-box-5:hover{background-image: url('assets/images/british-air.jpg');}
-    .airline-box-6:hover{background-image: url('assets/images/qatar-air.jpg');}
-    .airline-box-7:hover{background-image: url('assets/images/jet-blue-air.jpg');}
-    .airline-box-8:hover{background-image: url('assets/images/turkish-air.jpg');}
-    .airline-box-9:hover{background-image: url('assets/images/ethopian-air.jpeg');}
-
-    
-    .airline-box:hover {
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-size: cover;
-      aspect-ratio: 3/1;
-      filter: blur(0);
-    }
-  </style>
 </head>
 
 <body>
@@ -126,28 +71,23 @@
   <main>
     <div class="container-fluid">
       <div class="row pg-banner">
-        <div class="col" style="align-content:center; text-align: center;">
+        <div class="col pg-title">
           <h1>Airlines</h1>
         </div>
       </div>
       <div class="row justify-content-around p-4">
-        <div class="col-3 airline-box airline-box-1" style="aspect-ratio: 4/3;">Delta Airlines</div>
-        <div class="col-3 airline-box airline-box-2" style="aspect-ratio: 4/3;">United Airlines</div>
-        <div class="col-3 airline-box airline-box-3" style="aspect-ratio: 4/3;">American Airlines</div>
+        <div class="col-3 airline-box airline-box-1" style="aspect-ratio: 4/3;"><h5>Delta Airlines</h5></div>
+        <div class="col-3 airline-box airline-box-2" style="aspect-ratio: 4/3;"><h5>United Airlines</h5></div>
+        <div class="col-3 airline-box airline-box-3" style="aspect-ratio: 4/3;"><h5>American Airlines</h5></div>
       </div>
       <div class="row justify-content-around p-4">
-        <div class="col-3 airline-box airline-box-4" style="aspect-ratio: 4/3;">Southwest Airlines</div>
-        <div class="col-3 airline-box airline-box-5" style="aspect-ratio: 4/3;">British Airways</div>
-        <div class="col-3 airline-box airline-box-6" style="aspect-ratio: 4/3;">Qatar Airways</div>
+        <div class="col-3 airline-box airline-box-4" style="aspect-ratio: 4/3;"><h5>Southwest Airlines</h5></div>
+        <div class="col-3 airline-box airline-box-5" style="aspect-ratio: 4/3;"><h5>British Airways</h5></div>
+        <div class="col-3 airline-box airline-box-6" style="aspect-ratio: 4/3;"><h5>Qatar Airways</h5></div>
       </div>
       <div class="row justify-content-around p-4">
-        <div class="col-3 airline-box airline-box-7" style="aspect-ratio: 4/3;">Blue Airlines</div>
-        <div class="col-3 airline-box airline-box-8" style="aspect-ratio: 4/3;">Turkish Airlines</div>
-        <div class="col-3 airline-box airline-box-9" style="aspect-ratio: 4/3;">Ethiopian Airlines</div>
-      </div>
-      <div class="row justify-content-around p-4">
-        <div class="col-3 airline-box" style="aspect-ratio: 4/3;">Alaska Airlines</div>
-        <div class="col-3 airline-box" style="aspect-ratio: 4/3;">Allegiant Airlines</div>
+        <div class="col-3 airline-box airline-box-7" style="aspect-ratio: 4/3;"><h5>Blue Airlines</h5></div>
+        <div class="col-3 airline-box airline-box-8" style="aspect-ratio: 4/3;"><h5>Turkish Airlines</h5></div>
       </div>
     </div>
   </main>
