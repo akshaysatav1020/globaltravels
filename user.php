@@ -17,9 +17,9 @@ if ($conn->connect_error) {
 // Handle POST requests
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if action is specified
-    var_dump($_POST[]);
     if(isset($_POST["action"])) {
         $action = $_POST["action"];
+        var_dump($_POST);
         
         // Perform CRUD operations based on action
         switch($action) {
