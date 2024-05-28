@@ -18,6 +18,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if action is specified
     if(isset($_POST["action"])) {
+        var_dump($_POST);
         $action = $_POST["action"];
         
         // Perform CRUD operations based on action
@@ -26,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Example of creating a record
                 //if(isset($_POST["data"])) {
                     //$data = $_POST["data"];
-                    var_dump($_POST);
                     $query="INSERT INTO user (name, email, contact, source, destination, departureDate, returnDate)
                     VALUES (?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($query);
