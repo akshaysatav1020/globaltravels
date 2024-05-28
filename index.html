@@ -82,7 +82,7 @@
     <div class="container-fluid">
       <div class="row" style="background-color: #959595a3;">
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <form action="" method="post" class="m-4 p-4">
+          <form action="./user.php" method="post" class="m-4 p-4">
             <div class="row">
               <div class="col">
                 <h3>VoyageEdge Travel Services</h3>
@@ -97,14 +97,14 @@
               <div class="col">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-airplane-fill"></i></span>
-                  <input type="text" class="form-control form-control-lg" placeholder="From" aria-label="Username"
+                  <input type="text" name="source" class="form-control form-control-lg" placeholder="From" aria-label="From"
                     aria-describedby="basic-addon1">
                 </div>
               </div>
               <div class="col">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-airplane-fill"></i></span>
-                  <input type="text" class="form-control form-control-lg" placeholder="To" aria-label="Username"
+                  <input type="text" name="destination" class="form-control form-control-lg" placeholder="To" aria-label="To"
                     aria-describedby="basic-addon1">
                 </div>
               </div>
@@ -113,14 +113,14 @@
               <div class="col">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-date-fill"></i></span>
-                  <input type="text" class="form-control form-control-lg" placeholder="Departure" aria-label="Username"
+                  <input type="text" name="departureDate" class="form-control form-control-lg" placeholder="Departure" aria-label="Departure"
                     aria-describedby="basic-addon1">
                 </div>
               </div>
               <div class="col">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-date-fill"></i></span>
-                  <input type="text" class="form-control form-control-lg" placeholder="Return" aria-label="Username"
+                  <input type="text" name="returnDate" class="form-control form-control-lg" placeholder="Return" aria-label="Return"
                     aria-describedby="basic-addon1">
                 </div>
               </div>
@@ -129,28 +129,28 @@
               <div class="col-md-4 col-sm-12">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-suitcase2-fill"></i></span>
-                  <input type="text" class="form-control form-control-lg" placeholder="Name" aria-label="Username"
+                  <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" aria-label="Name"
                     aria-describedby="basic-addon1">
                 </div>
               </div>
               <div class="col-md-4 col-sm-12">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope-at-fill"></i></span>
-                  <input type="text" class="form-control form-control-lg" placeholder="Email" aria-label="Username"
+                  <input type="text" name="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email"
                     aria-describedby="basic-addon1">
                 </div>
               </div>
               <div class="col-md-4 col-sm-12">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-                  <input type="text" class="form-control form-control-lg" placeholder="Contact" aria-label="Username"
+                  <input type="text" name="contact" class="form-control form-control-lg" placeholder="Contact" aria-label="Contact"
                     aria-describedby="basic-addon1">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <button class="btn btn-lg button form-control">Submit</button>
+                <button class="btn btn-lg button form-control" name="create">Submit</button>
               </div>
             </div>
           </form>
