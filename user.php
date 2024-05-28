@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Example of creating a record
                 //if(isset($_POST["data"])) {
                     //$data = $_POST["data"];
+                    var_dump($_POST);
                     $query="INSERT INTO user (name, email, contact, source, destination, departureDate, returnDate)
                     VALUES (?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($query);
