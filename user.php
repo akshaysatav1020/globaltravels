@@ -18,12 +18,23 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if action is specified
     if(isset($_POST["action"])) {
-        $action = $_POST["action"];
-        
-        
+        $action = $_POST["action"];                
         // Perform CRUD operations based on action
         switch($action) {
-            case "create":                
+            case "create":
+                if (preg_match("/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/i", $_POST["email"])) {
+                    echo "<script>alert('Err! Invalid Email.');window.location.href='./';</script>";
+                }
+                if(preg_match("/[0-9]{10}/", $_POST["contact"])) {
+                    echo "<script>alert('Err! Invalid contact');window.location.href='./';</script>";
+                }
+                if(preg_match("/[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}/", $_POST["departureDate"]) || 
+                    preg_match("/[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}/", $_POST["returnDate"])) {
+                    echo "<script>alert('Err! Invalid departure or return date.');window.location.href='./';</script>";
+                }
+                if(preg_match("/[a-zA_Z]+/", $_POST["name"])) {
+                    echo "<script>alert('Err! Name shouldn't be blank.');window.location.href='./';</script>";
+                }
                 $query="INSERT INTO user (name, email, contact, source, destination, departureDate, returnDate)
                 VALUES (?, ?, ?, ?, ?, ?, ?)";
                 $stmt = $conn->prepare($query);
@@ -75,5 +86,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close connection
 $conn->close();
-
 ?>

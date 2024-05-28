@@ -113,15 +113,15 @@
               <div class="col">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-date-fill"></i></span>
-                  <input type="text" name="departureDate" class="form-control form-control-lg" placeholder="Departure" aria-label="Departure"
-                    aria-describedby="basic-addon1">
+                  <input type="text" name="departureDate" class="form-control form-control-lg" placeholder="Departure(dd-mm-yyyy)" aria-label="Departure"
+                    aria-describedby="basic-addon1" pattern="[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}">
                 </div>
               </div>
               <div class="col">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-date-fill"></i></span>
-                  <input type="text" name="returnDate" class="form-control form-control-lg" placeholder="Return" aria-label="Return"
-                    aria-describedby="basic-addon1">
+                  <input type="text" name="returnDate" class="form-control form-control-lg" placeholder="Return(dd-mm-yyyy)" aria-label="Return"
+                    aria-describedby="basic-addon1" pattern="[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}">
                 </div>
               </div>
             </div>
@@ -130,21 +130,21 @@
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-suitcase2-fill"></i></span>
                   <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" aria-label="Name"
-                    aria-describedby="basic-addon1">
+                    aria-describedby="basic-addon1" pattern="[a-zA-Z]{6,}">
                 </div>
               </div>
               <div class="col-md-4 col-sm-12">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope-at-fill"></i></span>
                   <input type="text" name="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email"
-                    aria-describedby="basic-addon1">
+                    aria-describedby="basic-addon1" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 </div>
               </div>
               <div class="col-md-4 col-sm-12">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
                   <input type="text" name="contact" class="form-control form-control-lg" placeholder="Contact" aria-label="Contact"
-                    aria-describedby="basic-addon1">
+                    aria-describedby="basic-addon1" pattern="[0-9]{10}">
                 </div>
               </div>
             </div>
