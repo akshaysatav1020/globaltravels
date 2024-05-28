@@ -24,19 +24,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         switch($action) {
             case "create":
                 // Example of creating a record
-                if(isset($_POST["data"])) {
-                    $data = $_POST["data"];
+                //if(isset($_POST["data"])) {
+                    //$data = $_POST["data"];
                     $query="INSERT INTO user (name, email, contact, source, destination, departureDate, returnDate)
                     VALUES (?, ?, ?, ?, ?, ?, ?)";
                     $stmt = $conn->prepare($query);
                     $stmt->bind_param("sssssss",$name, $email, $contact, $source, $destination, $departureDate, $returnDate);               
-                    $name = $data["name"];
-                    $email = $data["email"];
-                    $contact = $data["contact"];
-                    $source = $data["source"];
-                    $destination = $data["destination"];
-                    $departureDate = $data["departureDate"];
-                    $returnDate = $data["returnDate"];
+                    $name = $_POST["name"];
+                    $email = $_POST["email"];
+                    $contact = $_POST["contact"];
+                    $source = $_POST["source"];
+                    $destination = $_POST["destination"];
+                    $departureDate = $_POST["departureDate"];
+                    $returnDate = $_POST["returnDate"];
                     $stmt->execute();
                     if ($stmt->affected_rows > 0) {
                         echo "<script>alert('Thank you! We will soon contact you.');window.location.href='./';</script>";
