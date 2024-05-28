@@ -1,5 +1,5 @@
 <?php
-
+ini_set("DISPLAY_ERRORS", 1);
 // Database connection details
 $servername = "localhost";
 $username = "u105620976_voyageDB";
