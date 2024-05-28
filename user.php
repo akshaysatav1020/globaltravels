@@ -19,33 +19,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if action is specified
     if(isset($_POST["action"])) {
         $action = $_POST["action"];
-        var_dump($_POST[]);
+        
         
         // Perform CRUD operations based on action
         switch($action) {
-            case "create":
-                // Example of creating a record
-                //if(isset($_POST["data"])) {
-                    //$data = $_POST["data"];
-                    $query="INSERT INTO user (name, email, contact, source, destination, departureDate, returnDate)
-                    VALUES (?, ?, ?, ?, ?, ?, ?)";
-                    $stmt = $conn->prepare($query);
-                    $stmt->bind_param("sssssss",$name, $email, $contact, $source, $destination, $departureDate, $returnDate);               
-                    $name = $_POST["name"];
-                    $email = $_POST["email"];
-                    $contact = $_POST["contact"];
-                    $source = $_POST["source"];
-                    $destination = $_POST["destination"];
-                    $departureDate = $_POST["departureDate"];
-                    $returnDate = $_POST["returnDate"];
-                    $stmt->execute();
-                    if ($stmt->affected_rows > 0) {
-                        echo "<script>alert('Thank you! We will soon contact you.');window.location.href='./';</script>";
-                    } else {
-                        echo "Failed to insert row.";
-                    }
-                    $stmt->close();
+            case "create":                
+                $query="INSERT INTO user (name, email, contact, source, destination, departureDate, returnDate)
+                VALUES (?, ?, ?, ?, ?, ?, ?)";
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param("sssssss",$name, $email, $contact, $source, $destination, $departureDate, $returnDate);               
+                $name = $_POST["name"];
+                $email = $_POST["email"];
+                $contact = $_POST["contact"];
+                $source = $_POST["source"];
+                $destination = $_POST["destination"];
+                $departureDate = $_POST["departureDate"];
+                $returnDate = $_POST["returnDate"];
+                $stmt->execute();
+                if ($stmt->affected_rows > 0) {
+                    echo "<script>alert('Thank you! We will soon contact you.');window.location.href='./';</script>";
+                } else {
+                    echo "Failed to insert row.";
                 }
+                $stmt->close();
                 break;
             case "read":
                 // Example of reading records
