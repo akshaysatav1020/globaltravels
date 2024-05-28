@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if action is specified
     if(isset($_POST["action"])) {
         $action = $_POST["action"];
-        var_dump($_POST);
+        var_dump($_POST[]);
         
         // Perform CRUD operations based on action
         switch($action) {
