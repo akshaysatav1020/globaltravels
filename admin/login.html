@@ -50,7 +50,7 @@
         <div class="container-fluid">
             <div class="row" style="background-color: #959595a3;">
                 <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-6 col-sm-12">
-                    <form action="./user.php" method="post" class="m-4 p-4">
+                    <form action="#" method="post" class="m-4 p-4">
                         <div class="row text-center">
                             <div class="col">
                                 <h3>VoyageEdge Travel Services<br /> (Admin Portal)</h3>
@@ -68,7 +68,7 @@
                                             class="bi bi-envelope-at-fill"></i></span>
                                     <input type="text" name="email" class="form-control form-control-lg"
                                         placeholder="Email" aria-label="Email" aria-describedby="basic-addon1"
-                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                                        pattern="[a-zA-Z0-9_%\+-.]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}" required>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button class="btn btn-lg button form-control" name="action"
+                                <button type="button" class="btn btn-lg button form-control" id="action" name="action"
                                     value="login">Login</button>
                             </div>
                         </div>
@@ -139,5 +139,21 @@
         </div>
     </footer>
 </body>
-
+<script>
+    fetch("http://localhost/voyageedgetravelservices/admin/user.php",{
+        method:"POST",
+        headers:{
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify({
+            "email":"akshay@akshay.com",
+            "password":"akshay"
+        }),
+    }).then(res =>{
+        return res.text()
+    }).then(data=>{
+        console.log(data)
+    });
+    
+</script>
 </html>
